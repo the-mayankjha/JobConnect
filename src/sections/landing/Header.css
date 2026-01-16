@@ -1,0 +1,127 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.7);
+    /* Dark Frosty Background */
+}
+
+.header.scrolled {
+    background: rgba(0, 0, 0, 0.85);
+    /* Slightly darker on scroll */
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.header-container {
+    height: 64px;
+    /* Reduced specific height */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+}
+
+.desktop-nav {
+    display: flex;
+    gap: 32px;
+}
+
+.desktop-nav a {
+    color: var(--text-primary);
+    /* White Text */
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.desktop-nav a:hover {
+    color: var(--text-primary);
+    opacity: 0.8;
+    /* Subtle opacity change instead of color change */
+}
+
+.header-actions {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.login-btn {
+    color: var(--text-primary);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.signup-btn {
+    background: var(--text-primary);
+    /* White */
+    color: var(--bg-primary);
+    /* Black */
+    padding: 8px 20px;
+    border-radius: 100px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: opacity 0.2s ease;
+}
+
+.signup-btn:hover {
+    opacity: 0.9;
+}
+
+.mobile-toggle {
+    display: none;
+    color: var(--text-primary);
+    cursor: pointer;
+}
+
+.mobile-menu {
+    position: absolute;
+    top: 64px;
+    left: 24px;
+    right: 24px;
+    padding: 24px;
+    flex-direction: column;
+}
+
+.mobile-menu nav {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.mobile-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border-subtle);
+}
+
+.mobile-actions .signup-btn {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+
+    .desktop-nav,
+    .header-actions {
+        display: none;
+    }
+
+    .mobile-toggle {
+        display: block;
+    }
+}

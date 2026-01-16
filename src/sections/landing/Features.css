@@ -1,0 +1,158 @@
+.features-section {
+    position: relative;
+    background-color: var(--bg-light);
+    /* Light Section */
+    color: var(--text-dark-primary);
+}
+
+.features-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--text-dark-primary);
+}
+
+.section-subtitle {
+    font-size: 20px;
+    color: var(--text-dark-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 300px);
+    gap: 24px;
+}
+
+.bento-card {
+    padding: 32px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+    /* Light Theme Card Override */
+    background: var(--bg-white);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    /* Subtle light border */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.card-large {
+    grid-column: span 2;
+    grid-row: span 2;
+    /* Clean white for large card */
+    background: var(--bg-white);
+}
+
+.card-small {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.card-wide {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+.card-content h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-dark-primary);
+}
+
+.card-content p {
+    color: var(--text-dark-secondary);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.icon-wrapper {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    background: rgba(0, 0, 0, 0.05);
+    /* Light mode icon bg */
+}
+
+/* Updated glows for light mode visibility */
+.glow-blue {
+    color: #007aff;
+    box-shadow: 0 0 20px rgba(0, 122, 255, 0.15);
+}
+
+.glow-purple {
+    color: #af52de;
+    box-shadow: 0 0 20px rgba(175, 82, 222, 0.15);
+}
+
+.glow-green {
+    color: #34c759;
+    box-shadow: 0 0 20px rgba(52, 199, 89, 0.15);
+}
+
+.glow-gold {
+    color: #ff9500;
+    box-shadow: 0 0 20px rgba(255, 149, 0, 0.15);
+}
+
+.card-content.horizontal {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.visual-ai {
+    position: absolute;
+    right: -50px;
+    bottom: -50px;
+    width: 300px;
+    height: 300px;
+    /* Solid refined shape or removed gradient */
+    background: rgba(0, 122, 255, 0.05);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+@media (max-width: 1024px) {
+    .bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .card-large {
+        grid-column: span 2;
+    }
+
+    .card-small,
+    .card-wide {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .bento-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card-large,
+    .card-small,
+    .card-wide {
+        grid-column: span 1;
+        min-height: 250px;
+    }
+}
