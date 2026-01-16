@@ -35,7 +35,10 @@ const Header: React.FC = () => {
     return (
         <header className={`header ${scrolled ? 'scrolled' : ''} ${!isVisible ? 'header-hidden' : ''}`}>
             <div className="container header-container">
-                <div className="logo">JobConnect</div>
+                <a href="/" className="logo">
+                    <img src="/logo_light.png" alt="JobConnect" />
+                    <span>JobConnect</span>
+                </a>
 
                 <nav className="desktop-nav">
 

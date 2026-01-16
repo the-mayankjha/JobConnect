@@ -32,11 +32,24 @@
 }
 
 .logo {
-    font-size: 24px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 12px;
+}
+
+.logo span {
+    font-size: 22px;
     font-weight: 700;
     letter-spacing: -0.02em;
     color: var(--text-dark-primary);
-    /* Dark Logo */
+}
+
+.logo img {
+    height: 44px;
+    /* Increased size */
+    width: auto;
+    object-fit: contain;
 }
 
 .desktop-nav {
