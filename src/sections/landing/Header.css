@@ -1,21 +1,26 @@
 .header {
     position: fixed;
+    /* Restore fixed for auto-hide */
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, background 0.3s ease;
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    background: rgba(0, 0, 0, 0.7);
-    /* Dark Frosty Background */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.8);
+    /* White Frosty */
+    transform: translateY(0);
+}
+
+.header.header-hidden {
+    transform: translateY(-100%);
 }
 
 .header.scrolled {
-    background: rgba(0, 0, 0, 0.85);
-    /* Slightly darker on scroll */
-    border-bottom: 1px solid var(--border-subtle);
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .header-container {
@@ -30,7 +35,8 @@
     font-size: 24px;
     font-weight: 700;
     letter-spacing: -0.02em;
-    color: var(--text-primary);
+    color: var(--text-dark-primary);
+    /* Dark Logo */
 }
 
 .desktop-nav {
@@ -39,17 +45,16 @@
 }
 
 .desktop-nav a {
-    color: var(--text-primary);
-    /* White Text */
+    color: var(--text-dark-secondary);
+    /* Dark Link */
     font-size: 15px;
     font-weight: 500;
     transition: color 0.2s ease;
 }
 
 .desktop-nav a:hover {
-    color: var(--text-primary);
-    opacity: 0.8;
-    /* Subtle opacity change instead of color change */
+    color: var(--text-dark-primary);
+    opacity: 1;
 }
 
 .header-actions {
@@ -59,16 +64,17 @@
 }
 
 .login-btn {
-    color: var(--text-primary);
+    color: var(--text-dark-primary);
+    /* Dark Login */
     font-size: 15px;
     font-weight: 500;
 }
 
 .signup-btn {
-    background: var(--text-primary);
-    /* White */
-    color: var(--bg-primary);
-    /* Black */
+    background: var(--text-dark-primary);
+    /* Black Button */
+    color: #FFFFFF;
+    /* White Text */
     padding: 8px 20px;
     border-radius: 100px;
     font-size: 15px;
@@ -82,7 +88,7 @@
 
 .mobile-toggle {
     display: none;
-    color: var(--text-primary);
+    color: var(--text-dark-primary);
     cursor: pointer;
 }
 

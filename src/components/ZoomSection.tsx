@@ -29,7 +29,7 @@ const ZoomSection: React.FC<ZoomSectionProps> = ({ children, className = "", dar
                     opacity,
                     borderRadius: '40px',
                     overflow: 'hidden',
-                    boxShadow: dark ? '0 25px 50px -12px rgba(0, 0, 0, 0.5)' : 'none',
+                    boxShadow: 'none',
                     minHeight: '400px',
                     backgroundColor: dark ? '#000000' : 'transparent',
                     color: dark ? '#FFFFFF' : 'inherit'
